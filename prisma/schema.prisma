@@ -300,20 +300,21 @@ model Player {
 
 // @View - Must be manually updated with every new Prisma introspection
 model Team {
-  team_id              String    @db.VarChar(36)
-  location             String
-  nickname             String
-  full_name            String
-  valid_from           DateTime  @db.Timestamp(6)
-  valid_until          DateTime? @db.Timestamp(6)
-  url_slug             String    @db.VarChar
-  stadium_id           String?   @default("") @db.VarChar(36)
-  team_abbreviation    String?   @default("") @db.VarChar(10)
-  team_main_color      String?   @default("") @db.VarChar(10)
-  team_secondary_color String?   @default("") @db.VarChar(10)
-  team_emoji           String?   @default("") @db.VarChar
-  team_slogan          String?   @default("") @db.VarChar
-  // deceased             Boolean   @default(false)
+  team_id                    String    @db.VarChar(36)
+  location                   String
+  nickname                   String
+  full_name                  String
+  valid_from                 DateTime  @db.Timestamp(6)
+  valid_until                DateTime? @db.Timestamp(6)
+  url_slug                   String    @db.VarChar
+  stadium_id                 String?   @default("") @db.VarChar(36)
+  team_abbreviation          String?   @default("") @db.VarChar(10)
+  team_abbreviation_official String?   @default("") @db.VarChar(10)
+  team_main_color            String?   @default("") @db.VarChar(10)
+  team_secondary_color       String?   @default("") @db.VarChar(10)
+  team_emoji                 String?   @default("") @db.VarChar
+  team_slogan                String?   @default("") @db.VarChar
+  // deceased                   Boolean   @default(false)
 
   team_current_status String?
   gameday_from        Int?
